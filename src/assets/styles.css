@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+#root {
+  font-family: "Bangers";
+  --card-width: 200px;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  place-items: center;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+}
+
+.gameWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 2rem;
+  grid-column: 2 / 3;
+}
+
+.card {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 50px;
+}
+
+.card img {
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.score {
+  grid-column: 3;
+  font-size: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .gameWrapper {
+    margin-block: 2rem;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(90px, 1fr));
+
+  }
+
+  .card {
+    font-size: 1.5rem;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  img {
+    width: 120px;
+    height: auto;
+  }
+  /* .score {
+    grid-column: 1 / 2;
+    font-size: 2rem;
+  } */
+}
+@media screen and (min-width: 768px) and  (max-width: 1024px) {
+  .gameWrapper {
+    margin-block: 2rem;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+
+  }
+
+  .card {
+    font-size: 1.5rem;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  img {
+    width: 120px;
+    height: auto;
+  }
+  /* .score {
+    grid-column: 1 / 2;
+    font-size: 2rem;
+  } */
+}
